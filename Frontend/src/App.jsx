@@ -1,6 +1,10 @@
 import {Route, Router, Routes} from 'react-router-dom';
-import Contact from './Pages/Contact';
 import Layout from './Components/Layout.jsx';
+import Home from './Pages/Homepage.jsx';
+import About from './Pages/AboutPage.jsx';
+import Projects from './Pages/ProjectsPage.jsx';
+import Education from './Pages/EducationPage.jsx';
+import Contact from './Pages/Contact';
 
 
 function App() {
@@ -9,8 +13,10 @@ function App() {
     <>
       <Routes>
           <Route path='/' element={<Layout />}>
-            <Route index element={<div>Home Page</div>} />
-            <Route path='/about' element={<div>About Page</div>} />
+            <Route index element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/projects' element={<Projects />} />
+            <Route path='/education' element={<Education />} />
             <Route path='/contact' element={<Contact />} />
           </Route>
       </Routes>
